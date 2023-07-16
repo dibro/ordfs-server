@@ -116,7 +116,8 @@ export function RegisterRoutes(app: express.Express) {
         if (!dir[filename]) {
           throw new NotFound();
         }
-        pointer = dir[filename].slice(6);
+        // pointer = dir[filename].slice(6);
+        pointer = dir[filename];
         file = await loadInscription(pointer, req.query.meta);
         immutable = false;
       }
